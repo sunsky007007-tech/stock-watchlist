@@ -20,7 +20,7 @@ import Watchlist from "./components/Watchlist.jsx";
 
 import { formatDataError, isValidSnapshot } from "./utils/dataStatus.js";
 
-const YEAR_OPTIONS = [1, 2, 5];
+const YEAR_OPTIONS = [1, 2];
 
 export default function App() {
   const [tickers, setTickers] = useState([]);
