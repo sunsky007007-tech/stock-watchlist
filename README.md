@@ -1,6 +1,32 @@
 # 美股自选 K 线看板
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
+
 带前端界面的美股自选股票系统，支持查看 **1 年 / 2 年** 日 K 线图。后端通过 **Financial Datasets MCP** 获取行情数据。
+
+## 快速体验
+
+```powershell
+git clone https://github.com/sunsky007007-tech/stock-watchlist.git
+cd stock-watchlist
+cd backend && copy .env.example .env
+# 编辑 backend\.env，填入你在 https://financialdatasets.ai 申请的 API Key
+cd ..
+npm install && npm run install:all && npm run dev
+```
+
+浏览器打开 http://localhost:5173 。免费档通常可用 **AAPL、MSFT、NVDA、TSLA**。
+
+> 每人需使用自己的 API Key，请勿将 `.env` 提交到 GitHub。
+
+## 截图预览
+
+| 主看板 | 选股器 |
+|--------|--------|
+| ![主看板](docs/screenshots/dashboard.svg) | ![选股器](docs/screenshots/screener.svg) |
+
+将真实截图保存为 `docs/screenshots/dashboard.png` 与 `screener.png` 后，把上面表格里的 `.svg` 改成 `.png` 即可。详见 [截图说明](docs/screenshots/README.md)。
 
 ## 功能
 
@@ -129,3 +155,9 @@ cd frontend && npm run dev
 - 前端：React、Vite、TradingView Lightweight Charts
 - 后端：Express、@modelcontextprotocol/sdk
 - 数据：Financial Datasets MCP
+
+## 开源与贡献
+
+- 协议：[MIT](LICENSE)
+- 欢迎 Issue / Pull Request
+- 仓库 Topics：`stock-watchlist` `react` `vite` `express` `financial-data` `mcp` `watchlist` `us-stocks` `tradingview-charts`
