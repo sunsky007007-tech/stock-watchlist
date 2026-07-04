@@ -24,9 +24,9 @@ npm install && npm run install:all && npm run dev
 
 | 主看板 | 选股器 |
 |--------|--------|
-| ![主看板](docs/screenshots/dashboard.svg) | ![选股器](docs/screenshots/screener.svg) |
+| ![主看板](docs/screenshots/dashboard.png) | ![选股器](docs/screenshots/screener.png) |
 
-将真实截图保存为 `docs/screenshots/dashboard.png` 与 `screener.png` 后，把上面表格里的 `.svg` 改成 `.png` 即可。详见 [截图说明](docs/screenshots/README.md)。
+截图存放于 `docs/screenshots/`。如需更新，参见 [截图说明](docs/screenshots/README.md)。
 
 ## 功能
 
