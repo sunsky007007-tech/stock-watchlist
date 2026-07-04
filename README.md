@@ -1,6 +1,6 @@
 # 美股自选 K 线看板
 
-带前端界面的美股自选股票系统，支持查看 **1 年 / 2 年 / 5 年** 日 K 线图。后端通过 **Financial Datasets MCP** 获取行情数据。
+带前端界面的美股自选股票系统，支持查看 **1 年 / 2 年** 日 K 线图。后端通过 **Financial Datasets MCP** 获取行情数据。
 
 ## 功能
 
@@ -10,7 +10,7 @@
 - 顶部「选股」弹窗：按财务指标筛选美股并加入自选
 - 顶部宏观条：主要央行政策利率（若账号有权限）
 - 右侧个股新闻
-- 支持 1Y / 2Y / 5Y 切换
+- 支持 1Y / 2Y 切换
 
 ## 架构（前后端分离，推荐保持）
 
@@ -96,7 +96,7 @@ cd frontend && npm run dev
 | GET | `/api/watchlist` | 获取自选列表 |
 | POST | `/api/watchlist` | 添加股票 `{ "ticker": "NVDA" }` |
 | DELETE | `/api/watchlist/:ticker` | 删除股票 |
-| GET | `/api/prices/:ticker?years=1` | 获取 K 线（years: 1/2/5） |
+| GET | `/api/prices/:ticker?years=1` | 获取 K 线（years: 1/2） |
 | GET | `/api/snapshot/:ticker` | 获取最新价快照 |
 | GET | `/api/snapshots?tickers=NVDA,AAPL` | 批量获取快照 |
 | GET | `/api/company/:ticker` | 公司信息（行业、板块等） |
@@ -120,7 +120,6 @@ cd frontend && npm run dev
 ## 数据范围说明
 
 - **1 年 / 2 年**：免费套餐通常可用
-- **5 年**：可能需要 Financial Datasets **Pro** 套餐（取决于账号权限）
 - **选股筛选**：部分账号可能返回空结果，取决于套餐数据范围
 - **分部财务 / KPI**：通常需要 Pro / Enterprise 套餐
 - **宏观利率**：取决于 API 账户余额与权限
